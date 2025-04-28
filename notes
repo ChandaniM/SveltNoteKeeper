@@ -1,0 +1,72 @@
+<!-- <script>
+    let isEditing = $state(false);
+	let editingId = $state(null);
+	let input = $state([
+		{
+			id: 0,
+			notes: ''
+		}
+	]);
+	input = input.filter((e, i) => {
+		e.notes != '';
+	});
+	let count = $state(1);
+	let note = $state();
+
+	function add() {
+		input.push({ id: count++, notes: note });
+		note = '';
+	}
+
+	/**
+	 * @param {number} id
+	 */
+	function deleteElement(id) {
+		input = input.filter((e, i) => {
+			return e.id != id;
+		});
+	}
+
+
+	/**
+	 * @param {{ id: number; notes: string; }} element
+	 */
+	function editElement(element) {
+		input = input.filter(e => e.id !== element.id);
+		if (isEditing && editingId === element.id) {    
+			isEditing = false;
+			editingId = null;
+			note = '';
+		}
+	}
+</script>
+
+<div class="note_container">
+	<input type="text" name="" bind:value={note} id="input" />
+	<button type="submit" onclick={() => add()}>Submit</button>
+</div>
+<div>
+	{#each input as element, i (element)}
+		<div>{element.id}</div>
+		<div class="element">{element.notes}</div>
+		<button type="button" onclick={() => deleteElement(element.id)}>delete</button>
+		<button onclick={()=>editElement(element)}>edit</button>
+	{/each}
+</div>
+
+<style>
+	#input {
+		border: 1px solid;
+		padding: 16px;
+		height: 30px;
+		width: 40%;
+		border-radius: 5px;
+	}
+	button {
+		background-color: #3b693b;
+		color: #fff;
+		font-size: 14px;
+		padding: 8px;
+		border-radius: 5px;
+	}
+</style> -->
