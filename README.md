@@ -1,6 +1,7 @@
 # Svelte
 
-Everything you need to build a Svelte project, powered by [`Svelte`](https://github.com/sveltejs/cli).
+Everything you need to build a Svelte project, powered by <a href="https://github.com/sveltejs/cli" target="_blank">Svelte</a>.
+
 
 ## Creating a project
 
